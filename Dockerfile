@@ -1,15 +1,11 @@
 FROM python:3.11-slim
 
-# Set working directory
 WORKDIR /app
-
-# Copy requirements and install dependencies
+ENV PYTHONPATH=/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code and tests
 COPY src ./src
 COPY tests ./tests
 
-# Default command: run tests
 CMD ["pytest"]
