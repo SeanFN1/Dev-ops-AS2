@@ -25,7 +25,7 @@ def calculate_cancellation_fee(
 
     # Base fee percentage
     if days_before >= 30:
-        fee_percent = 20
+        fee_percent = 0
     elif days_before >= 7:
         fee_percent = 20
     elif days_before >= 1:
